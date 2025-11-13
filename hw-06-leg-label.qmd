@@ -8,46 +8,37 @@ format: typst
 
 # Exercise 1
 
-```{embed}
-#| file: scripts/leg-label.R
-#| eval: false
+```r
+{{< include scripts/leg-label.r >}}
 ```
 
-```{embed}
-#| file: scripts/leg-label.py
-#| eval: false
+```python
+{{< include scripts/leg-label.py >}}
 ```
 
 ## Naive and simple prompt
 
-```{embed}
-#| file: prompts/cap-simple.md
-```
+{{< include prompts/cap-simple.md >}}
+
 
 ## Explicit code/label values
 
-```{embed}
-#| file: prompts/cap-detailed.md
-```
+{{< include prompts/cap-detailed.md >}}
 
 ## Detailed and reasoning prompt
 
-```{embed}
-#| file: prompts/cap-reasoning.md
-```
+{{< include prompts/cap-reasoning.md >}}
 
 # Exercise 2
 
 # Exercise 3
 
-```{embed}
-#| file: app.R
-#| eval: false
+```r
+{{< include app.r >}}
 ```
 
-```{embed}
-#| file: app.py
-#| eval: false
+```python
+{{< include app.py >}}
 ```
 
 # Generative AI (GAI) self-reflection
