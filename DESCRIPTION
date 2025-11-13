@@ -1,0 +1,14 @@
+Imports:
+  usethis,
+  styler,
+  reprex,
+  miniUI,
+  devtools,
+  gitcreds,
+  ellmer,
+  tidyverse,
+  tidymodels,
+  arrow,
+  here,
+  shiny,
+  shinychat

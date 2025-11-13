@@ -1,0 +1,54 @@
+---
+title: "Homework 06 - Labeling legislative bills"
+subtitle: "INFO 4940/5940 - Fall 2025"
+author: "Your name"
+date: today
+format: typst
+---
+
+# Exercise 1
+
+```{embed}
+#| file: scripts/leg-label.R
+#| eval: false
+```
+
+```{embed}
+#| file: scripts/leg-label.py
+#| eval: false
+```
+
+## Naive and simple prompt
+
+```{embed}
+#| file: prompts/cap-simple.md
+```
+
+## Explicit code/label values
+
+```{embed}
+#| file: prompts/cap-detailed.md
+```
+
+## Detailed and reasoning prompt
+
+```{embed}
+#| file: prompts/cap-reasoning.md
+```
+
+# Exercise 2
+
+# Exercise 3
+
+```{embed}
+#| file: app.R
+#| eval: false
+```
+
+```{embed}
+#| file: app.py
+#| eval: false
+```
+
+# Generative AI (GAI) self-reflection
+
