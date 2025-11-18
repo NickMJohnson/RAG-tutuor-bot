@@ -1,7 +1,7 @@
 ---
 title: "Homework 06 - Labeling legislative bills"
 subtitle: "INFO 4940/5940 - Fall 2025"
-author: "Your name"
+author: "Nick Johnson"
 date: today
 format: typst
 ---
@@ -31,8 +31,174 @@ format: typst
 
 # Exercise 2
 
-# Exercise 3
+```{python}
+import pyarrow.feather as feather
 
+import numpy as np
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
+
+import pandas as pd
+
+preds = pd.read_csv("data/llm_predictions.csv")
+
+
+# Make sure types are right
+preds["true_label"] = preds["true_label"].astype(int)
+preds["pred_label"] = preds["pred_label"].astype(int)
+
+
+def multiclass_sensitivity_specificity(y_true, y_pred):
+    """
+    Compute macro-averaged sensitivity (recall) and specificity
+    for a multiclass problem using the confusion matrix.
+    """
+    labels = np.unique(y_true)
+    cm = confusion_matrix(y_true, y_pred, labels=labels)
+
+    sensitivities = []
+    specificities = []
+
+    for i, _ in enumerate(labels):
+        tp = cm[i, i]
+        fn = cm[i, :].sum() - tp
+        fp = cm[:, i].sum() - tp
+        tn = cm.sum() - tp - fn - fp
+
+        sens = tp / (tp + fn) if (tp + fn) > 0 else np.nan
+        spec = tn / (tn + fp) if (tn + fp) > 0 else np.nan
+
+        sensitivities.append(sens)
+        specificities.append(spec)
+
+    return float(np.nanmean(sensitivities)), float(np.nanmean(specificities))
+
+
+rows = []
+
+for (model, prompt), group in preds.groupby(["model_label", "prompt_label"]):
+    y_true = group["true_label"].to_numpy()
+    y_pred = group["pred_label"].to_numpy()
+
+    acc = accuracy_score(y_true, y_pred)
+    f1 = f1_score(y_true, y_pred, average="macro")
+    sens, spec = multiclass_sensitivity_specificity(y_true, y_pred)
+
+    rows.append(
+        {
+            "model": model,
+            "prompt": prompt,
+            "accuracy": acc,
+            "f1_macro": f1,
+            "sensitivity_macro": sens,
+            "specificity_macro": spec,
+        }
+    )
+
+metrics_df = pd.DataFrame(rows).sort_values(["model", "prompt"]).reset_index(drop=True)
+metrics_df
+
+```
+
+```{python}
+import matplotlib.pyplot as plt
+
+plt.figure()
+for prompt in metrics_df["prompt"].unique():
+    subset = metrics_df[metrics_df["prompt"] == prompt]
+    plt.plot(subset["model"], subset["accuracy"], marker="o", label=prompt)
+
+    plt.ylabel("Accuracy")
+    plt.xlabel("Model")
+    plt.title("Accuracy by Model and Prompt")
+    plt.legend(title="Prompt type")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+```
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Make sure metrics_df exists from previous chunk
+
+models = metrics_df["model"].unique()
+prompts = metrics_df["prompt"].unique()
+
+x = np.arange(len(models))  # positions for models on x-axis
+width = 0.25                # width of each bar
+
+plt.figure()
+
+for i, prompt in enumerate(prompts):
+    subset = metrics_df[metrics_df["prompt"] == prompt]
+    # Align subset to models order
+    subset = subset.set_index("model").loc[models]
+    plt.bar(x + i * width, subset["accuracy"], width=width, label=prompt)
+
+plt.xticks(x + width, models, rotation=45)
+plt.ylabel("Accuracy")
+plt.title("Accuracy by Model and Prompt")
+plt.legend(title="Prompt type")
+plt.tight_layout()
+plt.show()
+```
+```{python}
+import matplotlib.pyplot as plt
+
+# Pivot F1 into a matrix: rows = prompt, cols = model
+
+f1_pivot = metrics_df.pivot(index="prompt", columns="model", values="f1_macro")
+
+plt.figure()
+plt.imshow(f1_pivot.values, aspect="auto")
+plt.colorbar(label="Macro F1")
+
+plt.xticks(range(len(f1_pivot.columns)), f1_pivot.columns, rotation=45)
+plt.yticks(range(len(f1_pivot.index)), f1_pivot.index)
+
+plt.title("Macro F1 by Model and Prompt")
+plt.tight_layout()
+plt.show()
+
+```
+```{python}
+from sklearn.metrics import confusion_matrix
+
+# Find the best combo by accuracy (you can change to f1_macro if you prefer)
+best_row = metrics_df.sort_values("accuracy", ascending=False).iloc[0]
+best_model = best_row["model"]
+best_prompt = best_row["prompt"]
+print("Best combo:", best_model, best_prompt)
+
+# Filter predictions for that combo
+
+best_preds = preds[
+    (preds["model_label"] == best_model) & (preds["prompt_label"] == best_prompt)
+]
+
+y_true = best_preds["true_label"].astype(int).to_numpy()
+y_pred = best_preds["pred_label"].astype(int).to_numpy()
+
+labels = sorted(np.unique(y_true))
+cm = confusion_matrix(y_true, y_pred, labels=labels)
+
+plt.figure(figsize=(6, 6))
+plt.imshow(cm, interpolation="nearest")
+plt.title(f"Confusion Matrix for {best_model} / {best_prompt}")
+plt.xlabel("Predicted label")
+plt.ylabel("True label")
+plt.xticks(range(len(labels)), labels, rotation=45)
+plt.yticks(range(len(labels)), labels)
+
+# Add counts on the heatmap
+
+for i in range(len(labels)):
+    for j in range(len(labels)):
+        plt.text(j, i, cm[i, j], ha="center", va="center")
+
+plt.tight_layout()
+plt.show()# Exercise 3
+```
 ```r
 {{< include app.r >}}
 ```
