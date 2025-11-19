@@ -197,8 +197,13 @@ for i in range(len(labels)):
         plt.text(j, i, cm[i, j], ha="center", va="center")
 
 plt.tight_layout()
-plt.show()# Exercise 3
+plt.show()
 ```
+
+Our evaluation of multiple LLM models and prompt strategies indicates that GPT-5 outperforms GPT-4.1 and the smaller GPT-5-nano by a notable margin across accuracy, macro F1, and sensitivity metrics. The reasoning and detailed prompts consistently yield better model performance than naive prompts, demonstrating that prompt design is critical to leveraging LLM capabilities effectively. While all models exhibit high specificity (>95%), sensitivity varies considerably, suggesting difficulty in identifying positive instances. This imbalance often leads to models favoring the majority class or negative outcomes. Overall, these findings support using larger, more capable LLMs with thoughtfully designed prompts for classification tasks to maximize predictive accuracy and balance sensitivity and specificity.
+
+
+# Exercise 3
 ```r
 {{< include app.r >}}
 ```

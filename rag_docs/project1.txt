@@ -1,0 +1,663 @@
+Overview
+PROJECT 01
+MODIFIED
+October 16, 2025
+Important dates
+
+Proposal due Thu, October 9
+Exploration due Thu, October 23
+Draft due Thu, October 30
+Final report + model card + deployed model + reproducibility & organization due on Thu, November 6
+Important
+The details will be updated as the project date approaches.
+Introduction
+
+TL;DR: Solve a problem using machine learning.
+
+This is intentionally vague – part of the challenge is to design a project that showcases best your interests and strengths. However we expect you to solve some sort of problem using classical machine learning techniques (broadly construed). This could be a prediction problem, a classification problem, a clustering problem, etc. The problem could be in any domain, and could involve any type of data. The project should be a substantial piece of work, and should involve a significant amount of data and computation.
+
+The project is very open ended. Neatness, coherency, and clarity will count. All components of the project must be reproducible.
+
+WarningThis is not an LLM project
+You will not create anything using large language models (LLMs) for this project. Your team must use classical machine learning techniques as taught in the first half of the course. If you have questions about what is and isn’t allowed, please ask the instructor.
+Deliverables
+
+The four primary deliverables for the final project are
+
+A project proposal with three ideas.
+A deployed model that is publicly accessible.
+A model card that documents the model.
+A final report to your “client” that documents the model development process.
+There will be additional submissions throughout the semester to facilitate completion of the project.
+
+Teams
+
+Projects will be completed in teams of 2-3 students. Every team member should be involved in all aspects of planning and executing the project. Each team member should make an equal contribution to all parts of the project. The scope of your project is based on the number of contributing team members on your project. If you have 3 contributing team members, we will expect a larger project than a team of 2 contributing team members.
+
+The course staff will assign students to teams. To facilitate this process, we will provide a short survey identifying study and communication habits. Once teams are assigned, they cannot be changed.
+
+Team conflicts
+
+Conflict is a healthy part of any team relationship. If your team doesn’t have conflict, then your team members are likely not communicating their issues with each other. Use your team contract (written at the beginning of the project) to help keep your team dynamic healthy.
+
+When you have conflict, you should follow this procedure:
+
+Refer to the team contract and follow it to address the conflict.
+
+If you resolve the conflict without issue, great! Otherwise, update the team contract and try to resolve the conflict yourselves.
+
+If your team is unable to resolve your conflict, please contact soltoffbc@cornell.edu and explain your situation.
+
+We’ll ask to meet with all the group members and figure out how we can work together to move forward.
+
+Please do not avoid confrontation if you have conflict. If there’s a conflict, the best way to handle it is to bring it into the open and address it.
+
+Project grade adjustments
+
+Remember, do not do the work for a slacking team member. This only rewards their bad behavior. Simply leave their work unfinished. (We will not increase your grade during adjustments for doing more than your fair share.)
+
+Your team will initially receive a final grade assuming that all team members contributed to your project. If you have a 5-person team, but only 3 persons contributed, your team will likely receive a lower grade initially because only 3 persons worth of effort exists for a 5-person project. About a week after the initial project grades are released, adjustments will be made to each individual team member’s group project grade.
+
+We use your project’s Git history (to view the contributions of each team member) and the peer evaluations to adjust each team members’ grades. Both adjustments to increase or decrease your grade are possible based on each individual’s contributions.
+
+For example, if you have a 4-person team, but only 3 contributing members, the 3 contributing members may have their grades increased to reflect the effort of only 3 contributing members. The non-contributing member will likely have their grade decreased significantly.
+
+WarningPenalties for failing to contribute
+I am serious about every member of the team equitably contributing to the project. Students who fail to contribute equitably may receive up to a 100% deduction on their project grade.
+Please be patient for the grade adjustments. The adjustments take time to do them fairly. Please know that the instructor handles this entire process himself, and I take it very seriously. If you think your initial group project grade is unfair, please wait for your grade adjustment before you contact us.
+
+The slacking team member
+
+Please do not cover for a slacking/freeloading team member. Please do not do their work for them! This only rewards their bad behavior. Simply leave their work unfinished. (We will not increase your grade during adjustments for doing more than your fair share.)
+
+Remember, we have your Git history. We can see who contributes to the project and who doesn’t. If a team member rarely commits to Git and only makes very small commits, we can see that they did not contribute their fair share.
+
+All students should make their project contributions through their own GitHub account. Do not commit changes to the repository from another team member’s GitHub account. Your Git history should reflect your individual contributions to the project.
+
+Overall grading
+
+The grade breakdown is as follows:
+
+Total	170 pts
+Project proposal	10 pts
+Exploration	15 pts
+Draft	20 pts
+Deployed model	30 pts
+Report	35 pts
+Model card	30 pts
+Reproducibility + organization	30 pts
+Late work policy
+
+There is no late work accepted on this project. Be sure to turn in your work early to avoid any technological mishaps.
+
+Proposal
+PROJECT 01
+MODIFIED
+September 26, 2025
+There are two main purposes of the project proposal:
+
+To help you think about the project early, so you can get a head start on finding data, reading relevant literature, thinking about the questions you wish to answer, etc.
+To ensure that the data you wish to analyze, methods you plan to use, and the scope of your analysis are feasible and will allow you to be successful for this project.
+Identify 3 problems you’re interested in potentially solving for the project. These problems should be solved using a classical machine learning model and real-world data. If you’re unsure where to find data, you can use the list of potential data sources in the Resources for datasets section as a starting point. It may also help to think of topics you’re interested in investigating and find datasets on those topics.
+
+Write the proposal in the proposal.qmd file in your project repo.
+
+Important
+You must use one of the topics in the proposal for the final project, unless instructed otherwise when given feedback.
+Proposal components
+
+For each topic, include the following components.
+
+Problem or question
+
+What is the problem you will solve?
+
+A well formulated objective. (You may include more than one idea if you want to receive feedback on different ideas for your project. However, one per topic is required.)
+Statement on why this topic is important.
+Identify the types of variables you will use. Categorical? Quantitative?
+How will you make the model usable? An interactive web application a la Shiny? A deployable API?
+Introduction and data
+
+You need to begin identifying potential datasets for your project as early as possible. You should include at least one dataset for each topic you propose; keep in mind the project will likely incorporate data from multiple sources.
+
+Identify the source of the data.
+
+State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
+
+Write a brief description of the observations.
+
+Address ethical concerns about the data, if any.
+
+WarningYou may not use data from a secondary data archive
+In plainest terms, do not use datasets you find from Kaggle or the UCI Machine Learning Repository. Your data should come from your own collection process (e.g. API or web scraping) or the primary source (e.g. government agency, research group, etc.).
+
+Please ask a member of the course staff if you’re unsure whether your dataset meets the criteria.
+Glimpse of data
+
+For each dataset:
+
+Place the file containing your data in the data-raw folder of the project repo.
+
+Provide a brief statistical overview of the data.
+
+R
+Python
+Use the skimr::skim() function to provide a glimpse of the dataset.
+TipDid you install a new package for the proposal?
+R
+Python
+Update your {renv} lockfile to include the new package(s) in your renv.lock file for maximum reproducibility.
+Resources for datasets
+
+You can find data wherever you like, but here are some recommendations to get you started. You shouldn’t feel constrained to datasets that are already in a tidy format, you can start with data that needs cleaning and tidying, scrape data off the web, or collect your own data.
+
+Awesome public datasets
+CDC
+Chicago Open Data Portal
+Data.gov
+Data is Plural
+Election Studies
+European Statistics
+FiveThirtyEight
+General Social Survey
+Goodreads
+Google Dataset Search
+Harvard Dataverse
+International Monetary Fund
+IPUMS survey data from around the world
+Los Angeles Open Data
+National Weather Service
+NHS Scotland Open Data
+NYC OpenData
+Open access to Scotland’s official statistics
+Pew Research
+Project Gutenberg
+Reddit posts and/or comments
+Sports Reference
+Statistics Canada
+The National Bureau of Economic Research
+UK Government Data
+UNICEF Data
+United Nations Data
+United Nations Statistics Division
+US Census Data
+World Bank Data
+Youth Risk Behavior Surveillance System (YRBSS)
+Evaluation criteria
+
+Category	Less developed projects	Typical projects	More developed projects
+Topic ideas	Fewer than three topics are included.
+
+Topics are vague and impossible or excessively difficult to collect.	Three topics are included and all or most data could feasibly be collected or accessed by the end of the project.
+
+Each dataset is described alongside a note about availability with a source cited.
+
+Exploratory data analysis
+PROJECT 01
+MODIFIED
+September 26, 2025
+Settle on a single idea and state your objective(s) clearly. You will carry out most of your data collection and cleaning, compute relevant summary statistics, and show plots of your data as applicable to your objective(s).
+
+Write up your explanation in the explore.qmd file in your project repo. It should include the following sections:
+
+Objective(s). State your objective(s) clearly.
+
+Data collection and cleaning. Have an initial draft of your data cleaning appendix. Document every step that takes your raw data file(s) and turns it into the analysis-ready data set that you would submit with your final project. Include text narrative describing your data collection (downloading, scraping, surveys, etc) and any additional data curation/cleaning (merging data frames, filtering, transformations of variables, etc). Include code for data curation/cleaning, but not collection.1
+
+Data description. Have an initial draft of your data description section. Your data description should be about your analysis-ready data.
+
+This should be inspired by the format presented in Gebru et al, 2018. Answer any relevant questions from sections 3.1-3.5 of the Gebru et al article, especially the following questions:
+
+What are the observations (rows) and the attributes (columns)?
+Why was this dataset created?
+Who funded the creation of the dataset?
+What processes might have influenced what data was observed and recorded and what was not?
+What preprocessing was done, and how did the data come to be in the form that you are using?
+If people are involved, were they aware of the data collection and if so, what purpose did they expect the data to be used for?
+Data limitations. Identify any potential problems with your dataset.
+
+Exploratory data analysis. Perform an (initial) exploratory data analysis. This should include summary statistics, visualizations, and any other relevant information about the data. This is where you start to understand your data and identify any initial trends or relationships. You should also identify any potential problems with your dataset.
+
+Remember this is where you also start to form ideas for potential feature engineering strategies and modeling approaches.
+
+WarningBe thorough
+Thorough EDA requires substantial review and analysis of your data. You should not expect to complete this phase in a single day. You should expect to iterate through at least 20-30 charts, sets of summary statistics, etc., to get a good understanding of your data.
+
+Visualizations are not expected to look perfect at this point since they are mainly intended for you and your team members. Standard expectations for visualizations (e.g. clearly labeled charts and axes, optimized color palettes) are not necessary at the EDA stage.
+
+This document provides an example of what EDA might look like for your project.
+Questions for mentor. List specific questions for your project mentor to answer in giving you feedback on this phase.
+
+Evaluation criteria
+
+Category	Less developed projects	Typical projects	More developed projects
+Objective(s)	Objective is not clearly stated or significantly limits potential analysis.	Clearly states the objective(s), which have moderate potential for interesting analyses.	Clearly states complex objective(s) that leads to significant potential for interesting analyses.
+Data cleaning	Data is minimally cleaned, with little documentation and description of the steps undertaken.	
+Completes all necessary data cleaning for subsequent analyses.
+
+Describes cleaning steps with some detail.
+
+Completes all necessary data cleaning for subsequent analyses.
+
+Describes all cleaning steps in full detail, so that the reader has an excellent grasp of how the raw data was transformed into the analysis-ready dataset.
+
+Data description	
+Simple description of some aspects of the dataset, little consideration for sources.
+
+The description is missing answers to applicable questions detailed in the “Datasheets for Datasets” paper.
+
+Answers all relevant questions in the “Datasheets for Datasets” paper.	All expectations of typical projects + credits and values data sources.
+Data limitations	
+The limitations are not explained in depth.
+
+There is no mention of how these limitations may affect the meaning of results.
+
+Identifies potential harms and data gaps, and describes how these could affect the meaning of results.	Creatively identifies potential harms and data gaps, and describes how these could affect the meaning of results, and the impact of results on people. It is evident that significant thought has been put into the limitations of the collected data.
+Exploratory data analysis	
+Motivation for choice of analysis methods is unclear.
+
+Does not justify decisions to either confirm / update research questions and data description.
+
+Sufficient plots (20-30) and summary statistics to identify typical values in single variables and connections between pairs of variables.
+
+Uses exploratory analysis to confirm/update research questions and data description.
+
+
+Draft
+PROJECT 01
+MODIFIED
+October 28, 2025
+Important
+The purpose of the draft is to give you an opportunity to get early feedback on your analysis. Therefore, the draft will focus primarily on the exploratory analysis and initial drafts of the final product(s).
+Write the draft write-up in the report.qmd file in your project repo. This should document your modeling strategies to date. At minimum, you are expected to include:
+
+Objective(s). State the problem(s) you are solving clearly.
+Data description. Your data description should be about your analysis-ready data.
+Decisions based on EDA. Based on your exploratory analysis, explicitly identify the decisions you made about your data (e.g. what to exclude, what to include, what to transform, etc). These could be things you do to preprocess the data before partitioning into training/test set, or possible feature engineering steps you will evaluate in the modeling phase.
+Resampling strategy. All teams are expected to partition their data into training/test sets using an appropriate strategy. Many teams will further partition the training set using a resampling strategy. Document your resampling strategy here and justify the approach you chose.
+Overview of modeling strategies. Provide an overview of the modeling strategies you plan to use. This should include a brief description of the models you plan to use, potential preprocessing or feature engineering steps, tuning parameters, and the evaluation metrics you plan to use to compare models.
+Initial results. Report any initial results you have. This should at least include a null model, as well as any of the modeling strategies from above that you have already tested. Include any relevant evaluation metrics and techniques we have learned in this class.
+TipYou do not need to fit all the models in the report.qmd file
+You may fit all the models in a separate R/Python script or Quarto file and save/export any appropriate model objects so you can report relevant metrics or create visualizations/tables to report on the models’ performance. You should include the results of the models in the report.qmd file.
+
+R
+Python
+To save and load scikit-learn models for later use (e.g., generating predictions in a different script), use the joblib or pickle libraries.
+
+Fit your model and save it using pickle.dump().
+
+from sklearn import ensemble
+from sklearn import datasets
+
+# fit the model
+clf = ensemble.HistGradientBoostingClassifier()
+X, y = datasets.load_iris(return_X_y=True)
+clf.fit(X, y)
+
+# Here you can replace pickle with joblib
+from pickle import dump
+with open("filename.pkl", "wb") as f:
+    dump(clf, f, protocol=5)
+
+In another script, load the model with pickle.load() and use .predict() as usual.
+
+# Here you can replace pickle with joblib
+from pickle import load
+with open("filename.pkl", "rb") as f:
+    clf = load(f)
+
+This approach preserves the model state and allows you to generate predictions in any script after loading.
+Evaluation criteria
+
+Category	Less developed projects	Typical projects	More developed projects
+Objectives	Objective is not clearly stated or significantly limits potential analysis.	Clearly states the objective(s), which have moderate potential for relevant impact.	Clearly states complex objective(s) that leads to significant potential for relevant impact.
+Data description	
+Simple description of some aspects of the dataset, little consideration for sources.
+
+The description is missing answers to applicable questions detailed in the “Datasheets for Datasets” paper.
+
+Answers all relevant questions in the “Datasheets for Datasets” paper.	All expectations of typical projects + credits and values data sources.
+Decisions based on EDA	
+Identifies minimal actions taken during the modeling stage based on the results of the EDA.
+
+Actions are unlikely to effect predictions.
+
+Identifies concrete actions taken during the modeling stage based on the results of the EDA.	All expectations of typical projects + actions demonstrate deliberate and careful analysis of the exploratory analysis.
+Resampling strategy	Does not use resampling methods (or an inappropriate method) to ensure robust model evaluation.	Selects an appropriate resampling strategy.	All expectations of typical projects + provides a thorough justification for the resampling strategy.
+Modeling strategies	
+Includes only simplistic models. Does not demonstrate understanding of the types of models covered in the course.
+
+Feature engineering steps are non-existent.
+
+Does not select evaluation metrics or metrics are not appropriate to the objective(s) + models.
+
+Identifies several modeling strategies which could generate a high-performance model.
+
+Documents relevant feature engineering steps to be evaluate for specific modeling strategies. Steps are selectively applied to appropriate models.
+
+Evaluation metrics are appropriate for the objective(s) + models.
+
+All expectations of typical projects + provides thorough explanation for the models/feature engineering/metrics. Shows care in selecting their methods.
+Initial results	
+Only reports results of null model.
+
+Results are presented in a disjointed or uninterpretable manner.
+
+Reports the results of some (but not all) of their modeling strategies.
+
+Results are presented in a clear and interpretable manner.
+
+Reports the results of the majority of their modeling strategies.
+
+Results are effectively communicated through the use of tables and/or figures.
+
+Report
+PROJECT 01
+MODIFIED
+November 2, 2025
+Your team will report on your model development process. This should include a detailed description of your data, your models, and your results. The report should be written in the report.qmd file in your project repo.
+
+Audience
+
+The target audience for this report is a senior-level executive with some data science background (but nothing very extensive). They are looking for a high-level overview of your project, the results, and the implications of those results. They are not interested in the nitty-gritty details of your code or the exact specifics of your model tuning process.
+
+WarningRemember your audience
+Your audience is not a data scientist. They do not care about the code you used to generate your models. In fact, it is best that no code is visible in the final output document. There should be no raw text output from R or Python. Everything should be appropriately formatted as a table or figure.
+Structure
+
+The report should contain information on:
+
+Objective(s). State the problem(s) you are solving clearly.
+
+Data description. Your data description should be about your analysis-ready data.
+
+This should be inspired by the format presented in Gebru et al, 2018. Answer any relevant questions from sections 3.1-3.5 of the Gebru et al article, especially the following questions:
+
+What are the observations (rows) and the attributes (columns)?
+Why was this dataset created?
+Who funded the creation of the dataset?
+What processes might have influenced what data was observed and recorded and what was not?
+What preprocessing was done, and how did the data come to be in the form that you are using?
+If people are involved, were they aware of the data collection and if so, what purpose did they expect the data to be used for?
+Resampling strategy. All teams are expected to partition their data into training/test sets using an appropriate strategy. Many teams will further partition the training set using a resampling strategy. Document your resampling strategy here and justify the approach you chose.
+
+Overview of modeling strategies. Provide an overview of the modeling strategies you plan to use. This should include a description of the models you used, preprocessing or feature engineering steps, tuning parameters, and the evaluation metrics you plan to use to compare models.
+
+Model comparison. Report on the models you evaluated. This should at least include a null model, as well as the modeling strategies from above. Include any relevant evaluation metrics and techniques we have learned in this class. Present this information in a clear and effective manner.
+
+Model evaluation. Evaluate the performance of your final model. This should include a discussion of the evaluation metrics you used and an explanation of how the model works (e.g. feature importance, partial dependence plots, observation-specific explanations).
+
+Recommendations. Provide recommendations based on your model. This could include a discussion of the model’s limitations, potential improvements, or how the model could be used in practice.
+
+Evaluation criteria
+
+Category	Less developed projects	Typical projects	More developed projects
+Objective(s)	Objective is not clearly stated or significantly limits potential analysis.	Clearly states the objective(s), which have moderate potential for relevant impact.	Clearly states complex objective(s) that leads to significant potential for relevant impact.
+Data description	
+Simple description of some aspects of the dataset, little consideration for sources.
+
+The description is missing answers to applicable questions detailed in the “Datasheets for Datasets” paper.
+
+Answers all relevant questions in the “Datasheets for Datasets” paper.	All expectations of typical projects + credits and values data sources.
+Resampling strategy	Does not use resampling methods (or an inappropriate method) to ensure robust model evaluation.	Selects an appropriate resampling strategy.	All expectations of typical projects + provides a thorough justification for the resampling strategy.
+Overview of modeling strategies	
+Includes only simplistic models. Does not demonstrate understanding of the types of models covered in the course.
+
+Feature engineering steps are non-existent.
+
+Does not select evaluation metrics or metrics are not appropriate to the objective(s) + models.
+
+Identifies several modeling strategies which could generate a high-performance model.
+
+Documents relevant feature engineering steps to be evaluate for specific modeling strategies. Steps are selectively applied to appropriate models.
+
+Evaluation metrics are appropriate for the objective(s) + models.
+
+All expectations of typical projects + provides thorough explanation for the models/feature engineering/metrics. Shows care in selecting their methods.
+Model comparison	Results are presented in a disjointed or uninterpretable manner.	
+Reports the results of their modeling strategies.
+
+Results are presented in a clear and interpretable manner.
+
+Utilizes tables and/or figures to effectively communicate with the audience.
+
+All expectations of typical projects + reports results in an effective and concise narrative.
+
+Tables and/or figures show care and deliberation in their design.
+
+Model evaluation	
+Does not fit a single model using the entire training set.
+
+No documentation for why the team selected this model.
+
+Performance metrics from the test set are missing.
+
+Explanation of how the model works is missing or incomplete.
+
+Fits a single model based on the results of the model comparison. Provides written explanation for why they selected this specific model.
+
+Reports performance metrics using the test set.
+
+Explains how the model works using appropriate techniques (e.g. feature importance scores, partial dependence plots, observation-specific explanations).
+
+All expectations of typical projects + reports evaluation in an effective and concise narrative.
+Recommendations	Recommendations are unclear or unsupported by the performance metrics.	
+Provides a clear set of recommendations regarding how to use the model.
+
+Identifies limitations and potential improvements in future iterations of the model.
+
+All expectations of typical projects + recommendations are actionable. It is clear how this model will be used in a production environment.
+Writing	May have spelling and grammatical errors, or awkward or incomplete sentences, indicating that they were written in haste without editing.	Language will be polished and free from errors.	Writing is clear and complicated ideas are presented such that they are immediately understandable.
+Figures/tables	
+Figures and tables do not adhere to best practices.
+
+Figures are unclear or difficult to interpret.
+
+Tables are printed as raw output from R/Python and not as formatted tables.
+
+Figures and tables adhere to best practices.
+
+Results from models are presented using compact tables and/or figures.
+
+All expectations of typical projects + figures have a consistent visual appearance throughout the report.
+
+Figures and tables are intentionally and thoughtfully designed.
+
+Model card
+PROJECT 01
+MODIFIED
+November 9, 2025
+The model card is a document that accompanies a trained machine learning model. It provides a summary of the model’s performance and limitations, as well as the context in which it was trained and used. The model card should be written in the model-card.qmd file in your project repo using the template we learned in class and practiced for homework.
+
+Evaluation criteria
+
+Category	Less developed projects	Typical projects	More developed projects
+Model details	Lacks basic information regarding the model version, type, and other relevant details.	Answers basic questions regarding the model version, type, and other relevant details.	All expectations of typical projects + questions are answered thoroughly.
+Intended use	Unclear why the model was created and/or how it should be used.	Explains why the model was created and how it should and should not be used.	All expectations of typical projects + questions are answered thoroughly.
+Factors	
+Does not identify relevant factors for contextualizing the model.
+
+Identified factors are artificial or superfluous.
+
+Identifies relevant aspects or factors that influence how users contextualize the model.	All expectations of typical projects + demonstrates serious thought and consideration to relevant factors.
+Metrics and data sets	
+Metrics are unstated or inappropriate for the model.
+
+Unclear what data was used to train and/or evaluate the model.
+
+Clearly states the metrics used to evaluate the model.
+
+Identifies the data used to train the model.
+
+Identifies the data used to evaluate the model.
+
+All expectations of typical projects + questions are answered thoroughly.
+Quantitative analyses	
+Doesn’t report overall or disaggregated metrics.
+
+Metrics are reported in a shoddy or unclear manner.
+
+Reports overall metrics of model performance using the evaluation data.
+
+Metrics are disaggregated based on relevant factors previously identified.
+
+All expectations of typical projects + effectively uses tables/figures to communicate results of analyses.
+
+Figures and tables are properly labeled.
+
+Figures are aesthetically pleasing and clearly interpretable.
+
+Ethical considerations	Fails to seriously address ethical considerations.	Identifies ethical considerations that went into model development.	All expectations of typical projects + demonstrates serious thought and consideration to relevant considerations.
+Caveats & recommendations	
+Caveats are superficial or meaningless.
+
+Recommendations for how the model should be used to make decisions are missing or unclear.
+
+Describes appropriate caveats or remaining concerns to using the model.
+
+Articulates recommendations for how the model should be used to make decisions.
+
+All expectations of typical projects + demonstrates serious thought and consideration to relevant caveats and recommendations.
+
+
+Project 01
+Deployed model
+Deployed model
+PROJECT 01
+MODIFIED
+November 6, 2025
+All teams will publish their model for public usage. This might could be an interactive web application where users can generate custom predictions from the model, a deployable API allowing developers to interface with the model to generate predictions, or some other form.
+
+Note
+We will learn how to publish models using APIs in this course. At this time I do not expect to cover Shiny applications before project 01 is submitted, but your team is free to learn how to use Shiny or a similar tool independently for the project.
+WarningMake it easy to evaluate your deployment
+
+If you deploy via a Shiny app, include a link to the published app in the README.md file in your project repo.
+If you deploy via an API, include an R or Python script in your repo that demonstrates how to use the API to generate predictions for your test set. We should be able to source that R script and it just works.
+Evaluation criteria
+
+Evaluation criteria differ based on the deployment approach. Teams using a deployment method other than publishing via API will be evaluated a bit more generously given the higher degree of difficulty.
+
+Deployed via API
+Category	Less developed projects	Typical projects
+Deployment	API is not deployed successfully to a public URL. Documentation is inaccessible.	API is deployed successfully to a public URL. Documentation is accessible.
+Performance	API does not successfully generate predictions.	API successfully used to generate predictions for observations.
+API reproducibility	plumber.R/app.py script does not successfully run.	plumber.R/app.py script successfully runs.
+Docker reproducibility	Required Docker artifacts are missing from the repo. Docker container fails to successfully build and/or run.	All required Docker artifacts are included in the repo. Docker container successfully builds and run.
+Deployed using a Shiny app
+Category	Less developed projects	Typical projects	More developed projects
+Deployment	App is not deployed successfully to a public URL.	App is deployed successfully to a public URL.	N/A
+Design + visualization	The design/visualization are inappropriate for the data and/or audience. Charts are hard to read. Design is non-intuitive or hard to access.	The design/visualizations are appropriate and easy to read.	All expectations of typical projects + consistently adheres to best practices for high-quality, accessible data visualizations. Includes but not limited to deliberate choice of color palette, appropriate font size, intuitive labeling.
+Functionality	App is incomplete or broken. Code generates numerous errors or warnings which cause usability problems. App does not provide value to the audience.	App provides sufficient value to the intended audience. No errors or warnings present in final version. App is complete.	All expectations of typical projects + app is intricate and exceptionally designed. Showcases significant technical skills beyond those directly taught in the course.
+Code	Code is not efficient, hard to read, and/or lacks appropriate formatting or consistency. Clearly looks like multiple individuals wrote it instead of a single, cohesive approach.	Code is efficient, easy to read, and properly formatted.	All expectations of typical projects + code is thoroughly documented with comments. Adheres to consistent style guide. Clearly reusable and/or extensible for outside developers.
+
+Reproducibility + organization
+PROJECT 01
+MODIFIED
+September 26, 2025
+All written work should be reproducible, and the GitHub repo should be neatly organized.
+
+Points for reproducibility + organization will be based on the reproducibility of the entire repository and the organization of the project GitHub repo.
+The repo should be neatly organized as described above, there should be no extraneous files, all text in the README should be easily readable.
+TipThe easiest way to ensure reproducibility
+Have a team member clone the repository to a new location (on Posit Workbench or their local machine), install required packages as specified in the lockfiles (renv::restore() for R, uv sync for Python), and try to render all Quarto files and run any R/Python scripts. If everything runs without error, your project is (likely) reproducible!
+Evaluation criteria
+
+Category	Less developed projects	Typical projects
+Reproducibility (code)	Required files are missing. Quarto files do not render successfully (except for if a package needs to be installed).	All required files are provided. Project files (e.g. Quarto, Shiny apps, R/Python scripts) render without issues and reproduce the necessary outputs.
+Reproducibility (packages)	renv.lock and/or uv.lock files do not include all required packages. External users have to manually install packages in order to get code to evaluate.	renv.lock and/or uv.lock files include all required packages. Manual package installation is not required to render any code in the repo (e.g. Quarto documents, R/Python scripts).
+Data documentation	Codebook is missing. No local copies of data files.	All datasets are stored in a data folder, a codebook is provided, and a local copy of the data file is used in the code where needed.
+File organization/readability	Documents lack a clear structure. There are extraneous materials in the repo and/or files are not clearly organized.	Documents (Quarto files and R scripts) are well structured and easy to follow. No extraneous materials.
+
+Project tips + resources
+PROJECT 01
+MODIFIED
+September 26, 2025
+Tips
+
+Ask questions if any of the expectations are unclear.
+
+Merge conflicts will happen, issues will arise, and that’s fine! Commit and push often, and ask questions when stuck.
+
+Review the evaluation criteria for each assignment. There should not be any surprises in how you are evaluated.
+
+Set aside time to work together and apart (physically).
+
+Make sure each team member is contributing, both in terms of quality and quantity of contribution (we will be reviewing commits from different team members).
+
+All team members are expected to contribute equally to the completion of this assignment and group assessments will be given at its completion - anyone judged to not have sufficient contributed to the final product will have their grade reduced. While different teams members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment works.
+
+When you’re done, check your work. Review the documents on GitHub to make sure you’re happy with the final state of your work.
+
+“Do I need to … to get a good grade?”
+
+It’s an open-ended project. We award points for what you do, we never take points off for what you don’t do. There are many things that we consider difficult (combining multiple datasets, reformatting data, collecting from web pages), so if you find that any of them make sense, we will recognize that in our consideration of how ambitious you are. None of them are required.
+
+Students often find this kind of open-ended project difficult because it requires more independence and feels more risky. We’ve built in multiple low-stakes checkpoints to help make sure we give you feedback and reduce the feeling of “flying blind”. But it’s also the most realistic and valuable experience to prepare you for what you will do after graduation, and the thing that alums most often remember years later.
+
+Installing additional packages
+
+We have configured your repositories to install the basic set of packages we use in this class (e.g. {tidyverse}, {tidymodels}, pandas,scikit-learn). It is likely that you will want to use additional packages specific to your projects. To ensure reproducibility and minimize issues when collaborating with your peers, you should keep lockfiles up-to-date.
+
+R using {renv}
+Python using uv
+This is a relatively straightforward process:1
+
+To install a new package for the project, use renv::install() or install.packages().
+Run renv::snapshot(type = "all"). This will update renv.lock to include all packages used in the project library.
+Stage, commit, and push the renv.lock file.
+The next time your peers pull from GitHub, they will get the updated lockfile. They can then run renv::restore() to install any new packages that were added to the lockfile.
+Formatting + communication
+
+Pay attention to details in your deliverables. Neatness, coherency, and clarity will count.
+
+Suppress code and warnings
+
+In the final deliverables, unless you have a specific rationale to include them, make sure the printing of code chunks is turned off with the option echo: false. In addition to code chunks, ensure all messages are turned off with the options warning: false and message: false. This can easily be done for all code chunks in a Quarto document by adding
+
+execute:
+  echo: false
+  warning: false
+  message: false
+
+to the YAML header.
+
+Headers
+
+Use headers to clearly label each section. Make sure there is a space between the previous line and the header. Use appropriate header levels.
+
+References
+
+Include all references in a section called “References” at the end of the report. This course does not have specific requirements for formatting citations and references. Optional: Use Quarto’s citation support for generating your reference. See Citations & Footnotes on the Quarto documentation for more on that.
+
+Appendix
+
+If you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”. The items in the appendix should be properly labeled. The appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix. We will not grade your appendix.
+
+Resize figures
+
+Resize plots and figures to appropriate dimensions based on the design of your final product(s). For Quarto documents, to resize individual figures set fig-width and fig-height in chunk options, e.g.,
+
+#| label: plot1
+#| fig-height: 3
+#| fig-width: 5
+
+replacing plot1 with a meaningful label and the height and width with values appropriate for your write up.
+
+Resize all figures in a Quarto website: Include the fig-height and fig-width options in the YAML header as shown below:
+
+execute:
+  fig-height: 3
+  fig-width: 5
+
+Replace the height and width values with values appropriate for your write up.
+
+Arranging plots
+
+Arrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.
+
+If you’re using {ggplot2} functions, the {patchwork} package makes it easy to arrange plots in a grid. plotnine in Python has a similar syntax for combining plots.
+
+Acknowledgments
+
+Tips and resources draw from STA 313: Advanced Data Visualization
