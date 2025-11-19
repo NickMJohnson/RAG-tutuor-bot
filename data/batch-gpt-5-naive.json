@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "stage": "waiting",
+  "batch": {
+    "id": "batch_691cf2cb40d481908059c43dbf1bb56b",
+    "completion_window": "24h",
+    "created_at": 1763504843,
+    "endpoint": "/v1/chat/completions",
+    "input_file_id": "file-QVonWqWZojxqNsJnPmnqLd",
+    "object": "batch",
+    "status": "in_progress",
+    "cancelled_at": null,
+    "cancelling_at": null,
+    "completed_at": null,
+    "error_file_id": null,
+    "errors": null,
+    "expired_at": null,
+    "expires_at": 1763591243,
+    "failed_at": null,
+    "finalizing_at": null,
+    "in_progress_at": 1763504844,
+    "metadata": null,
+    "model": "gpt-5-2025-08-07",
+    "output_file_id": null,
+    "request_counts": {
+      "completed": 453,
+      "failed": 0,
+      "total": 500
+    },
+    "usage": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 0
+    }
+  },
+  "results": [],
+  "started_at": 1763504842,
+  "hash": {
+    "provider": "OpenAI",
+    "model": "gpt-5",
+    "prompts": "32a903948f6f219305ecaf2eb1de41a0",
+    "user_turns": "4f4bdfdaba8e99556182df1aba06742d"
+  }
+}
