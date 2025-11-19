@@ -107,13 +107,13 @@ for prompt in metrics_df["prompt"].unique():
     subset = metrics_df[metrics_df["prompt"] == prompt]
     plt.plot(subset["model"], subset["accuracy"], marker="o", label=prompt)
 
-    plt.ylabel("Accuracy")
-    plt.xlabel("Model")
-    plt.title("Accuracy by Model and Prompt")
-    plt.legend(title="Prompt type")
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.show()
+plt.ylabel("Accuracy")
+plt.xlabel("Model")
+plt.title("Accuracy by Model and Prompt")
+plt.legend(title="Prompt type")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
 ```
 ```{python}
 import matplotlib.pyplot as plt
@@ -202,7 +202,7 @@ plt.show()# Exercise 3
 ```r
 {{< include app.r >}}
 ```
-
+Link to app: https://019a9d96-3e1e-232e-db76-84b5f6eba95f.share.connect.posit.cloud/
 ```python
 {{< include app.py >}}
 ```

@@ -1,0 +1,6 @@
+shiny
+chatlas
+python-dotenv
+sentence-transformers
+numpy
+PyPDF2
