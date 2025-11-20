@@ -207,10 +207,11 @@ I was unable to retain token usage with chatlas.
 
 
 # Exercise 3
+**Link to app: https://019a9d96-3e1e-232e-db76-84b5f6eba95f.share.connect.posit.cloud/**\
 ```r
 {{< include app.r >}}
 ```
-**Link to app: https://019a9d96-3e1e-232e-db76-84b5f6eba95f.share.connect.posit.cloud/**\
+
 ```python
 {{< include app.py >}}
 ```

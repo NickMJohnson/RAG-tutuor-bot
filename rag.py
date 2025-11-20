@@ -93,7 +93,7 @@ def _load_documents() -> list[str]:
     return chunks
 
 
-# --------- Embedding model + precomputed embeddings --------- #
+#Embedding model 
 
 # Small, fast embedding model (recommended style for RAG homework)
 embed_model = SentenceTransformer("sentence-transformers/all-MiniLM-L12-v2")
