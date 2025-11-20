@@ -200,17 +200,21 @@ plt.tight_layout()
 plt.show()
 ```
 
-Our evaluation of multiple LLM models and prompt strategies indicates that GPT-5 outperforms GPT-4.1 and the smaller GPT-5-nano by a notable margin across accuracy, macro F1, and sensitivity metrics. The reasoning and detailed prompts consistently yield better model performance than naive prompts, demonstrating that prompt design is critical to leveraging LLM capabilities effectively. While all models exhibit high specificity (>95%), sensitivity varies considerably, suggesting difficulty in identifying positive instances. This imbalance often leads to models favoring the majority class or negative outcomes. Overall, these findings support using larger, more capable LLMs with thoughtfully designed prompts for classification tasks to maximize predictive accuracy and balance sensitivity and specificity.
+**Comparing Models**\
+Overall, the reasoning and detailed prompts perform significantly better than naive prompts across all models, highlighting the importance of prompt engineering in leveraging LLM capabilities effectively. Across models, GPT-5 consistently outperforms GPT-4.1 and GPT-5-nano, indicating that larger models with more advanced architectures yield better classification performance. Sensitivity remains a challenge, particularly for smaller models and naive prompts, suggesting that these configurations struggle to identify positive instances effectively. Specificity is generally high across all models and prompts, indicating that negative instances are classified correctly more often. These insights underscore the value of using larger LLMs with well-crafted prompts for classification tasks to achieve optimal accuracy and balance between sensitivity and specificity.
+
+I was unable to retain token usage with chatlas. 
 
 
 # Exercise 3
 ```r
 {{< include app.r >}}
 ```
-Link to app: https://019a9d96-3e1e-232e-db76-84b5f6eba95f.share.connect.posit.cloud/
+**Link to app: https://019a9d96-3e1e-232e-db76-84b5f6eba95f.share.connect.posit.cloud/**\
 ```python
 {{< include app.py >}}
 ```
 
 # Generative AI (GAI) self-reflection
 
+For this homework, I utilized generative AI tools for coding and help with designing reasoning prompts. I also used Generarive AI to help build my shiny app. I think I demonstrated mastery of topics by effectively using batch processing to evaluate all 9 model and prompt combinations, compare them using accuracy, f1, sensitivity, and specificity. I also created visualizations to help compare model performance. Lastly, I created a shiny app using RAG to store all the homeworks, syllabus and projects then added some extra functionality such as language/topic selections and tips/example questions.
