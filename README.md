@@ -28,6 +28,23 @@ Classifies U.S. congressional bill descriptions into one of the 20 major policy 
 - Structured outputs (`PolicyPrediction`) are collected and saved to `data/llm_predictions.csv`
 - Batch job state is cached in `data/batch-{model}-{prompt}.json` for resumability
 
+### Results
+
+**Accuracy by model and prompt strategy**
+![Accuracy by model and prompt](images/accuracy_by_model_prompt.png)
+
+**Macro F1 score heatmap**
+![F1 heatmap](images/f1_heatmap.png)
+
+**Sensitivity & specificity**
+![Sensitivity and specificity](images/sensitivity_specificity.png)
+
+Key findings:
+- GPT-5 with reasoning prompt achieved the highest accuracy (72.8%) and macro F1 (0.67)
+- Naive prompts hurt smaller models severely — GPT-5-nano naive scored only 5% accuracy
+- Detailed and reasoning prompts are comparable for GPT-5; reasoning prompts strongly rescue GPT-5-nano
+- Specificity is high (>95%) across all combinations; sensitivity is the harder metric
+
 ### Run
 ```bash
 python scripts/leg-label.py
