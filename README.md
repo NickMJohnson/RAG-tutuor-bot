@@ -39,6 +39,9 @@ Classifies U.S. congressional bill descriptions into one of the 20 major policy 
 **Sensitivity & specificity**
 ![Sensitivity and specificity](images/sensitivity_specificity.png)
 
+**Confusion matrix — best model (GPT-5 / reasoning)**
+![Confusion matrix](images/confusion_matrix.png)
+
 Key findings:
 - GPT-5 with reasoning prompt achieved the highest accuracy (72.8%) and macro F1 (0.67)
 - Naive prompts hurt smaller models severely — GPT-5-nano naive scored only 5% accuracy
