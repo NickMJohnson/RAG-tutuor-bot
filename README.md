@@ -57,6 +57,8 @@ python scripts/leg-label.py
 
 ## RAG Tutor Chatbot
 
+**[Live app](https://019a9d96-3e1e-232e-db76-84b5f6eba95f.share.connect.posit.cloud/)**
+
 A course tutor chatbot for INFO 4940/5940 built with [Python Shiny](https://shiny.posit.co/py/) and powered by GPT-4.1-mini. Uses Retrieval-Augmented Generation (RAG) over course documents to answer student questions accurately.
 
 ### Features
